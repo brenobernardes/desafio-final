@@ -1,0 +1,170 @@
+:root {
+  --black: #000000;
+  --white: #fff;
+  --gray: #808080;
+  --footer-color: #f4f4f4;
+}
+
+@font-face {
+  font-family: "MontSerrat Medium";
+  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MontSerrat Regular";
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--white);
+}
+
+.leftFooter {
+  display: flex;
+  justify-content: flex-start;
+  width: 40%;
+}
+
+.rightFooter {
+  display: flex;
+  justify-content:space-between;
+  width: 60%;
+  background-color: var(--footer-color);
+}
+
+.footerContent li {
+list-style-type: none;
+}
+
+.footerBox.footer1 {
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
+.footerBox.footer1 ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.footerBox.footer1 li {
+  padding-right: 10px;
+}
+
+.footerBox.footer1 li:hover {
+  color: var(--gray);
+}
+
+.footerBox.footerBox.footer1 p {
+  text-transform: lowercase;
+}
+
+.footerBox.footer2 ul {
+  padding-left: 20px;
+}
+
+.footerBox.footer2 li {
+  font-weight: bold;
+  border-bottom: 1px solid;
+  width: 50%;
+  margin: 10px;
+}
+
+.footerBox.footer2 a{
+  text-decoration: none;
+  color: var(--black);
+  text-transform: lowercase;
+}
+
+.footerBox.footer2 a:hover {
+  color: var(--gray);
+  transition: .4s;
+}
+
+.footerBox {
+  width: 100%;
+}
+
+.footerBox h2 {
+  font-size: 20px;
+}
+
+.footerBox p {
+  font-size: 12px;
+}
+
+.footerBox.Brasil {
+  width: 15%;
+}
+
+.footerBox.Argentina {
+  width: 15%;
+}
+
+.footerBox.Mexico {
+  width: 15%;
+}
+
+.footerBox.Chile {
+  width: 15%;
+  padding-right: 40px;
+}
+
+@media only screen and (max-width: 940px) {
+
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .leftFooter {
+    width: 97%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .footerBox.footer2 ul {
+    padding: 0;
+  }
+
+  .footerBox.footer2 li{
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .rightFooter {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerBox.Chile {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .rightFooter{
+    align-items: flex-start;
+  }
+
+  .footerBox.footer2 ul {
+    font-size: 13px;
+  }
+  
+}
+
+@media only screen and (max-width: 450px) {
+  .rightFooter {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+  }
+}
